@@ -1,0 +1,10 @@
+C:\Users\DFN\Documents\GitHub\strength-calculator\bin\Debug\Strength Calculator.exe.config
+C:\Users\DFN\Documents\GitHub\strength-calculator\bin\Debug\Strength Calculator.exe
+C:\Users\DFN\Documents\GitHub\strength-calculator\bin\Debug\Strength Calculator.pdb
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.csprojAssemblyReference.cache
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength_Calculator.Form1.resources
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength_Calculator.Properties.Resources.resources
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.csproj.GenerateResource.cache
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.csproj.CoreCompileInputs.cache
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.exe
+C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.pdb

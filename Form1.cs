@@ -16,5 +16,30 @@ namespace Strength_Calculator
         {
             InitializeComponent();
         }
+
+        private void shearing_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screwClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screwSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screwThreading_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void screwAmount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
