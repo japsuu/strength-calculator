@@ -39,17 +39,19 @@
             this.screwAmount = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.shearing = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.resultBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.formula = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 66);
+            this.label1.Location = new System.Drawing.Point(112, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(84, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Leikkeisyys:";
             // 
@@ -60,27 +62,30 @@
             this.screwClass.Items.AddRange(new object[] {
             "8.8",
             "10.9"});
-            this.screwClass.Location = new System.Drawing.Point(222, 90);
+            this.screwClass.Location = new System.Drawing.Point(296, 111);
+            this.screwClass.Margin = new System.Windows.Forms.Padding(4);
             this.screwClass.Name = "screwClass";
-            this.screwClass.Size = new System.Drawing.Size(60, 21);
+            this.screwClass.Size = new System.Drawing.Size(137, 24);
             this.screwClass.TabIndex = 3;
             this.screwClass.SelectedIndexChanged += new System.EventHandler(this.screwClass_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 93);
+            this.label2.Location = new System.Drawing.Point(112, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 13);
+            this.label2.Size = new System.Drawing.Size(171, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Ruuvien kestävyysluokka:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 120);
+            this.label3.Location = new System.Drawing.Point(112, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Ruuvien koko:";
             // 
@@ -97,18 +102,20 @@
             "M27",
             "M30",
             "M36"});
-            this.screwSize.Location = new System.Drawing.Point(222, 117);
+            this.screwSize.Location = new System.Drawing.Point(296, 144);
+            this.screwSize.Margin = new System.Windows.Forms.Padding(4);
             this.screwSize.Name = "screwSize";
-            this.screwSize.Size = new System.Drawing.Size(60, 21);
+            this.screwSize.Size = new System.Drawing.Size(137, 24);
             this.screwSize.TabIndex = 6;
             this.screwSize.SelectedIndexChanged += new System.EventHandler(this.screwSize_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 147);
+            this.label4.Location = new System.Drawing.Point(112, 181);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Kierteisyys:";
             // 
@@ -119,9 +126,10 @@
             this.screwThreading.Items.AddRange(new object[] {
             "Osa",
             "Täys"});
-            this.screwThreading.Location = new System.Drawing.Point(222, 144);
+            this.screwThreading.Location = new System.Drawing.Point(296, 177);
+            this.screwThreading.Margin = new System.Windows.Forms.Padding(4);
             this.screwThreading.Name = "screwThreading";
-            this.screwThreading.Size = new System.Drawing.Size(60, 21);
+            this.screwThreading.Size = new System.Drawing.Size(137, 24);
             this.screwThreading.TabIndex = 8;
             this.screwThreading.SelectedIndexChanged += new System.EventHandler(this.screwThreading_SelectedIndexChanged);
             // 
@@ -132,18 +140,20 @@
             this.screwAmount.Items.AddRange(new object[] {
             "2x2 (4)",
             "1x2 (2)"});
-            this.screwAmount.Location = new System.Drawing.Point(222, 171);
+            this.screwAmount.Location = new System.Drawing.Point(296, 210);
+            this.screwAmount.Margin = new System.Windows.Forms.Padding(4);
             this.screwAmount.Name = "screwAmount";
-            this.screwAmount.Size = new System.Drawing.Size(60, 21);
+            this.screwAmount.Size = new System.Drawing.Size(137, 24);
             this.screwAmount.TabIndex = 9;
             this.screwAmount.SelectedIndexChanged += new System.EventHandler(this.screwAmount_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 174);
+            this.label5.Location = new System.Drawing.Point(112, 214);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.Size = new System.Drawing.Size(108, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Ruuvien määrä:";
             // 
@@ -151,50 +161,62 @@
             // 
             this.shearing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.shearing.FormattingEnabled = true;
-            this.shearing.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.shearing.Location = new System.Drawing.Point(222, 63);
+            this.shearing.Location = new System.Drawing.Point(296, 78);
+            this.shearing.Margin = new System.Windows.Forms.Padding(4);
             this.shearing.Name = "shearing";
-            this.shearing.Size = new System.Drawing.Size(60, 21);
+            this.shearing.Size = new System.Drawing.Size(137, 24);
             this.shearing.TabIndex = 11;
             this.shearing.SelectedIndexChanged += new System.EventHandler(this.shearing_SelectedIndexChanged);
             // 
-            // textBox1
+            // resultBox
             // 
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(222, 223);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(60, 20);
-            this.textBox1.TabIndex = 12;
+            this.resultBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.resultBox.Location = new System.Drawing.Point(296, 274);
+            this.resultBox.Margin = new System.Windows.Forms.Padding(4);
+            this.resultBox.Name = "resultBox";
+            this.resultBox.ReadOnly = true;
+            this.resultBox.Size = new System.Drawing.Size(79, 22);
+            this.resultBox.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 226);
+            this.label6.Location = new System.Drawing.Point(211, 278);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Kestävyys:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 226);
+            this.label7.Location = new System.Drawing.Point(384, 278);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
+            this.label7.Size = new System.Drawing.Size(49, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "N/mm²";
             // 
+            // formula
+            // 
+            this.formula.AutoSize = true;
+            this.formula.Location = new System.Drawing.Point(211, 324);
+            this.formula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.formula.Name = "formula";
+            this.formula.Size = new System.Drawing.Size(52, 17);
+            this.formula.TabIndex = 15;
+            this.formula.Text = "Kaava:";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.formula);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.resultBox);
             this.Controls.Add(this.shearing);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.screwAmount);
@@ -206,6 +228,7 @@
             this.Controls.Add(this.screwClass);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -224,9 +247,10 @@
         private System.Windows.Forms.ComboBox screwAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox shearing;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox resultBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label formula;
     }
 }
 

@@ -8,3 +8,13 @@ C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.
 C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.csproj.CoreCompileInputs.cache
 C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.exe
 C:\Users\DFN\Documents\GitHub\strength-calculator\obj\Debug\Strength Calculator.pdb
+C:\Users\japsu\source\repos\Strength Calculator\bin\Debug\Strength Calculator.exe.config
+C:\Users\japsu\source\repos\Strength Calculator\bin\Debug\Strength Calculator.exe
+C:\Users\japsu\source\repos\Strength Calculator\bin\Debug\Strength Calculator.pdb
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength Calculator.csprojAssemblyReference.cache
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength_Calculator.Form1.resources
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength_Calculator.Properties.Resources.resources
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength Calculator.csproj.GenerateResource.cache
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength Calculator.csproj.CoreCompileInputs.cache
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength Calculator.exe
+C:\Users\japsu\source\repos\Strength Calculator\obj\Debug\Strength Calculator.pdb
