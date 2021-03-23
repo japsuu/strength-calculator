@@ -313,9 +313,6 @@
             // 
             this.beam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.beam.FormattingEnabled = true;
-            this.beam.Items.AddRange(new object[] {
-            "2x2 (4)",
-            "1x2 (2)"});
             this.beam.Location = new System.Drawing.Point(168, 159);
             this.beam.Name = "beam";
             this.beam.Size = new System.Drawing.Size(104, 21);
@@ -343,9 +340,6 @@
             // 
             this.screwAmount1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.screwAmount1.FormattingEnabled = true;
-            this.screwAmount1.Items.AddRange(new object[] {
-            "2x2 (4)",
-            "1x2 (2)"});
             this.screwAmount1.Location = new System.Drawing.Point(168, 132);
             this.screwAmount1.Name = "screwAmount1";
             this.screwAmount1.Size = new System.Drawing.Size(104, 21);
@@ -446,9 +440,6 @@
             // 
             this.beamMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.beamMaterial.FormattingEnabled = true;
-            this.beamMaterial.Items.AddRange(new object[] {
-            "2x2 (4)",
-            "1x2 (2)"});
             this.beamMaterial.Location = new System.Drawing.Point(168, 186);
             this.beamMaterial.Name = "beamMaterial";
             this.beamMaterial.Size = new System.Drawing.Size(104, 21);
@@ -467,9 +458,6 @@
             // 
             this.plateMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.plateMaterial.FormattingEnabled = true;
-            this.plateMaterial.Items.AddRange(new object[] {
-            "2x2 (4)",
-            "1x2 (2)"});
             this.plateMaterial.Location = new System.Drawing.Point(168, 213);
             this.plateMaterial.Name = "plateMaterial";
             this.plateMaterial.Size = new System.Drawing.Size(104, 21);
@@ -488,9 +476,6 @@
             // 
             this.plateThickness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.plateThickness.FormattingEnabled = true;
-            this.plateThickness.Items.AddRange(new object[] {
-            "2x2 (4)",
-            "1x2 (2)"});
             this.plateThickness.Location = new System.Drawing.Point(168, 240);
             this.plateThickness.Name = "plateThickness";
             this.plateThickness.Size = new System.Drawing.Size(104, 21);
