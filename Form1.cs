@@ -109,7 +109,7 @@ namespace Strength_Calculator
 
         private void screwShearing_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Calculate();
         }
     }
 
