@@ -23,9 +23,9 @@ namespace Strength_Calculator
             List<Item> shearings = new List<Item>();
             shearings.Add(new Item() { Text = "Yksileikkeinen", Value = 1 });
             shearings.Add(new Item() { Text = "Kaksileikkeinen", Value = 2 });
-            shearing.DataSource = shearings;
-            shearing.DisplayMember = "Text";
-            shearing.ValueMember = "Value";
+            screwShearing.DataSource = shearings;
+            screwShearing.DisplayMember = "Text";
+            screwShearing.ValueMember = "Value";
 
             List<Item> classes = new List<Item>();
             classes.Add(new Item() { Text = "8.8", Value = 800 });
@@ -74,7 +74,7 @@ namespace Strength_Calculator
                 int.Parse(screwThreading.SelectedValue.ToString()),
                 int.Parse(screwClass.SelectedValue.ToString()),
                 int.Parse(screwSize.SelectedValue.ToString()),
-                int.Parse(shearing.SelectedValue.ToString()),
+                int.Parse(screwShearing.SelectedValue.ToString()),
                 int.Parse(screwAmount.SelectedValue.ToString()));
 
             resultBox.Text = result.ToString();
@@ -105,6 +105,11 @@ namespace Strength_Calculator
         private void screwAmount_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();
+        }
+
+        private void screwShearing_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
