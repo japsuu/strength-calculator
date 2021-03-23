@@ -70,14 +70,15 @@ namespace Strength_Calculator
             if (!flag)
                 return;
 
-            string result = CuttingStrength.Calculate(
+            float result = CuttingStrength.Calculate(
                 int.Parse(screwThreading.SelectedValue.ToString()),
                 int.Parse(screwClass.SelectedValue.ToString()),
                 int.Parse(screwSize.SelectedValue.ToString()),
                 int.Parse(shearing.SelectedValue.ToString()),
                 int.Parse(screwAmount.SelectedValue.ToString()));
 
-            resultBox.Text = result;
+            resultBox.Text = result.ToString();
+            resultBoxK.Text = (result / 1000).ToString();
             formula.Text = CuttingStrength.formula;
         }
 

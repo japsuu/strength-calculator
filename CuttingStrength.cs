@@ -12,7 +12,7 @@ namespace Strength_Calculator
     class CuttingStrength
     {
         public static string formula = "";
-        public static string Calculate(int _fullThread, int _screwClass, int _screwSize, int _shreading, int _screwAmount)
+        public static float Calculate(int _fullThread, int _screwClass, int _screwSize, int _shreading, int _screwAmount)
         {
             float av = 0;
             float fub = 0;
@@ -124,7 +124,7 @@ namespace Strength_Calculator
             //assign the formula "njauuuuuuuuuuuuu"
             formula = $"Kaava: ({av} * {fub} * {A} / 1.25) * {_screwAmount} * {_shreading} = {result}";
 
-            return result.ToString();
+            return result;
         }
     }
 }
