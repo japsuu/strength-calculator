@@ -100,14 +100,14 @@ namespace Strength_Calculator
 
             float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt) * shearing;
 
-            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {pT} = {((nver - 1) * p2 - 2 * d0 / 2) * pT}";
-            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {pT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT * 2}";
+            //formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {pT} = {((nver - 1) * p2 - 2 * d0 / 2) * pT}";
+            //formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {pT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT * 2}";
 
 
             float beamStrength = BeamStrength(bFy, bFu, bAnv, bAnt);
 
-            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {bT} = {((nver - 1) * p2 - 2 * d0 / 2) * bT}";
-            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {bT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * bT * 2}";
+            //formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {bT} = {((nver - 1) * p2 - 2 * d0 / 2) * bT}";
+            //formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {bT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * bT * 2}";
 
 
             return Math.Min(plateStrength, beamStrength);

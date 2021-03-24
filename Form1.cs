@@ -149,7 +149,6 @@ namespace Strength_Calculator
                 int.Parse(screwShearing.SelectedValue.ToString()),
                 int.Parse(screwAmount.SelectedValue.ToString()));
 
-            resultBox.Text = result.ToString();
             resultBoxK.Text = (result / 1000).ToString();
             formula.Text = CuttingStrength.formula;
         }
@@ -163,7 +162,7 @@ namespace Strength_Calculator
             {
                 if (inputs[i].Text == null || inputs[i].Text == "")
                 {
-                    inputs[i].BackColor = Color.FromArgb(255, 174, 168);
+                    inputs[i].BackColor = Color.FromArgb(255, 225, 225);
                 }
                 else
                     inputs[i].BackColor = Color.White;
@@ -187,8 +186,12 @@ namespace Strength_Calculator
                 int.Parse(screwSize1.SelectedValue.ToString()),
                 int.Parse(shearing.SelectedValue.ToString()));
 
-            result01.Text = (result / 1000).ToString() + " kN";
+            result01.Text = (result / 1000).ToString();
             blockFormula.Text = BlockShearingStrength.formula;
+            if (result >= 0)
+                negWarn.Visible = false;
+            else
+                negWarn.Visible = true;
         }
 
         private void shearing_SelectedIndexChanged(object sender, EventArgs e)
@@ -274,6 +277,14 @@ namespace Strength_Calculator
         private void p2_TextChanged(object sender, EventArgs e)
         {
             CalculateBlock();
+        }
+
+        private void alwaysOnTop_CheckedChanged(object sender, EventArgs e)
+        {
+            if (alwaysOnTop.Checked)
+                TopMost = true;
+            else
+                TopMost = false;
         }
     }
 
