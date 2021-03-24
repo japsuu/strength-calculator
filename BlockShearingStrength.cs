@@ -56,6 +56,9 @@ namespace Strength_Calculator
 
             float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt) * shearing;
 
+            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {pT}";
+            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {pT}";
+
 
             switch (beamMaterial)
             {
@@ -106,6 +109,8 @@ namespace Strength_Calculator
 
             float beamStrength = BeamStrength(bFy, bFu, bAnv, bAnt);
 
+            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {bT}";
+            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {bT}";
 
 
 

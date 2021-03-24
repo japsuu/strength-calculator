@@ -48,6 +48,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.blockFormula = new System.Windows.Forms.Label();
             this.result01 = new System.Windows.Forms.Label();
             this.screwSize1 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -71,7 +72,6 @@
             this.e2 = new System.Windows.Forms.TextBox();
             this.p1 = new System.Windows.Forms.TextBox();
             this.e1 = new System.Windows.Forms.TextBox();
-            this.blockFormula = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -95,7 +95,7 @@
             "8.8",
             "10.9"});
             this.screwClass.Location = new System.Drawing.Point(224, 79);
-            this.screwClass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwClass.Margin = new System.Windows.Forms.Padding(4);
             this.screwClass.Name = "screwClass";
             this.screwClass.Size = new System.Drawing.Size(137, 24);
             this.screwClass.TabIndex = 3;
@@ -135,7 +135,7 @@
             "M30",
             "M36"});
             this.screwSize.Location = new System.Drawing.Point(224, 112);
-            this.screwSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwSize.Margin = new System.Windows.Forms.Padding(4);
             this.screwSize.Name = "screwSize";
             this.screwSize.Size = new System.Drawing.Size(137, 24);
             this.screwSize.TabIndex = 6;
@@ -159,7 +159,7 @@
             "Osa",
             "Täys"});
             this.screwThreading.Location = new System.Drawing.Point(224, 145);
-            this.screwThreading.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwThreading.Margin = new System.Windows.Forms.Padding(4);
             this.screwThreading.Name = "screwThreading";
             this.screwThreading.Size = new System.Drawing.Size(137, 24);
             this.screwThreading.TabIndex = 8;
@@ -173,7 +173,7 @@
             "2x2 (4)",
             "1x2 (2)"});
             this.screwAmount.Location = new System.Drawing.Point(224, 178);
-            this.screwAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwAmount.Margin = new System.Windows.Forms.Padding(4);
             this.screwAmount.Name = "screwAmount";
             this.screwAmount.Size = new System.Drawing.Size(137, 24);
             this.screwAmount.TabIndex = 9;
@@ -194,7 +194,7 @@
             this.screwShearing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.screwShearing.FormattingEnabled = true;
             this.screwShearing.Location = new System.Drawing.Point(224, 46);
-            this.screwShearing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwShearing.Margin = new System.Windows.Forms.Padding(4);
             this.screwShearing.Name = "screwShearing";
             this.screwShearing.Size = new System.Drawing.Size(137, 24);
             this.screwShearing.TabIndex = 11;
@@ -204,7 +204,7 @@
             // 
             this.resultBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.resultBox.Location = new System.Drawing.Point(224, 242);
-            this.resultBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resultBox.Margin = new System.Windows.Forms.Padding(4);
             this.resultBox.Name = "resultBox";
             this.resultBox.ReadOnly = true;
             this.resultBox.Size = new System.Drawing.Size(79, 22);
@@ -244,7 +244,7 @@
             // 
             this.resultBoxK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.resultBoxK.Location = new System.Drawing.Point(224, 272);
-            this.resultBoxK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.resultBoxK.Margin = new System.Windows.Forms.Padding(4);
             this.resultBoxK.Name = "resultBoxK";
             this.resultBoxK.ReadOnly = true;
             this.resultBoxK.Size = new System.Drawing.Size(79, 22);
@@ -333,10 +333,20 @@
             this.tabPage2.Text = "Palamurtumiskestävyys";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // blockFormula
+            // 
+            this.blockFormula.AutoSize = true;
+            this.blockFormula.Location = new System.Drawing.Point(100, 395);
+            this.blockFormula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blockFormula.Name = "blockFormula";
+            this.blockFormula.Size = new System.Drawing.Size(52, 17);
+            this.blockFormula.TabIndex = 30;
+            this.blockFormula.Text = "Kaava:";
+            // 
             // result01
             // 
             this.result01.AutoSize = true;
-            this.result01.Location = new System.Drawing.Point(95, 398);
+            this.result01.Location = new System.Drawing.Point(100, 358);
             this.result01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.result01.Name = "result01";
             this.result01.Size = new System.Drawing.Size(38, 17);
@@ -348,7 +358,7 @@
             this.screwSize1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.screwSize1.FormattingEnabled = true;
             this.screwSize1.Location = new System.Drawing.Point(224, 194);
-            this.screwSize1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwSize1.Margin = new System.Windows.Forms.Padding(4);
             this.screwSize1.Name = "screwSize1";
             this.screwSize1.Size = new System.Drawing.Size(137, 24);
             this.screwSize1.TabIndex = 24;
@@ -379,7 +389,7 @@
             this.plateThickness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.plateThickness.FormattingEnabled = true;
             this.plateThickness.Location = new System.Drawing.Point(224, 290);
-            this.plateThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plateThickness.Margin = new System.Windows.Forms.Padding(4);
             this.plateThickness.Name = "plateThickness";
             this.plateThickness.Size = new System.Drawing.Size(137, 24);
             this.plateThickness.TabIndex = 22;
@@ -400,7 +410,7 @@
             this.plateMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.plateMaterial.FormattingEnabled = true;
             this.plateMaterial.Location = new System.Drawing.Point(224, 322);
-            this.plateMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.plateMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.plateMaterial.Name = "plateMaterial";
             this.plateMaterial.Size = new System.Drawing.Size(137, 24);
             this.plateMaterial.TabIndex = 20;
@@ -421,7 +431,7 @@
             this.beamMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.beamMaterial.FormattingEnabled = true;
             this.beamMaterial.Location = new System.Drawing.Point(224, 258);
-            this.beamMaterial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.beamMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.beamMaterial.Name = "beamMaterial";
             this.beamMaterial.Size = new System.Drawing.Size(137, 24);
             this.beamMaterial.TabIndex = 18;
@@ -442,7 +452,7 @@
             this.beam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.beam.FormattingEnabled = true;
             this.beam.Location = new System.Drawing.Point(224, 226);
-            this.beam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.beam.Margin = new System.Windows.Forms.Padding(4);
             this.beam.Name = "beam";
             this.beam.Size = new System.Drawing.Size(137, 24);
             this.beam.TabIndex = 16;
@@ -453,7 +463,7 @@
             this.shearing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.shearing.FormattingEnabled = true;
             this.shearing.Location = new System.Drawing.Point(224, 129);
-            this.shearing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.shearing.Margin = new System.Windows.Forms.Padding(4);
             this.shearing.Name = "shearing";
             this.shearing.Size = new System.Drawing.Size(137, 24);
             this.shearing.TabIndex = 15;
@@ -474,7 +484,7 @@
             this.screwAmount1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.screwAmount1.FormattingEnabled = true;
             this.screwAmount1.Location = new System.Drawing.Point(224, 162);
-            this.screwAmount1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.screwAmount1.Margin = new System.Windows.Forms.Padding(4);
             this.screwAmount1.Name = "screwAmount1";
             this.screwAmount1.Size = new System.Drawing.Size(137, 24);
             this.screwAmount1.TabIndex = 12;
@@ -533,7 +543,7 @@
             // p2
             // 
             this.p2.Location = new System.Drawing.Point(331, 80);
-            this.p2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p2.Margin = new System.Windows.Forms.Padding(4);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(45, 22);
             this.p2.TabIndex = 6;
@@ -543,7 +553,7 @@
             // e2
             // 
             this.e2.Location = new System.Drawing.Point(331, 48);
-            this.e2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.e2.Margin = new System.Windows.Forms.Padding(4);
             this.e2.Name = "e2";
             this.e2.Size = new System.Drawing.Size(45, 22);
             this.e2.TabIndex = 5;
@@ -553,7 +563,7 @@
             // p1
             // 
             this.p1.Location = new System.Drawing.Point(224, 80);
-            this.p1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p1.Margin = new System.Windows.Forms.Padding(4);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(45, 22);
             this.p1.TabIndex = 4;
@@ -563,22 +573,12 @@
             // e1
             // 
             this.e1.Location = new System.Drawing.Point(224, 48);
-            this.e1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.e1.Margin = new System.Windows.Forms.Padding(4);
             this.e1.Name = "e1";
             this.e1.Size = new System.Drawing.Size(45, 22);
             this.e1.TabIndex = 0;
             this.e1.Text = "0";
             this.e1.TextChanged += new System.EventHandler(this.e1_TextChanged);
-            // 
-            // blockFormula
-            // 
-            this.blockFormula.AutoSize = true;
-            this.blockFormula.Location = new System.Drawing.Point(95, 435);
-            this.blockFormula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.blockFormula.Name = "blockFormula";
-            this.blockFormula.Size = new System.Drawing.Size(52, 17);
-            this.blockFormula.TabIndex = 30;
-            this.blockFormula.Text = "Kaava:";
             // 
             // Form1
             // 
@@ -588,7 +588,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Kestävyyslaskuri";
