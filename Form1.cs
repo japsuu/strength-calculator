@@ -20,6 +20,7 @@ namespace Strength_Calculator
         {
             InitializeComponent();
 
+            //tab 1
             List<Item> shearings = new List<Item>();
             shearings.Add(new Item() { Text = "Yksileikkeinen", Value = 1 });
             shearings.Add(new Item() { Text = "Kaksileikkeinen", Value = 2 });
@@ -61,6 +62,71 @@ namespace Strength_Calculator
             screwAmount.DisplayMember = "Text";
             screwAmount.ValueMember = "Value";
 
+
+
+            //tab 2
+            List<Item> jointShearings = new List<Item>();
+            jointShearings.Add(new Item() { Text = "Yksileikkeinen", Value = 1 });
+            jointShearings.Add(new Item() { Text = "Kaksileikkeinen", Value = 2 });
+            shearing.DataSource = jointShearings;
+            shearing.DisplayMember = "Text";
+            shearing.ValueMember = "Value";
+
+            List<Item> screwCounts = new List<Item>();
+            screwCounts.Add(new Item() { Text = "1x2 (2)", Value = 2 });
+            screwCounts.Add(new Item() { Text = "2x2 (4)", Value = 4 });
+            screwAmount1.DataSource = screwCounts;
+            screwAmount1.DisplayMember = "Text";
+            screwAmount1.ValueMember = "Value";
+
+            List<Item> screwSizes = new List<Item>();
+            screwSizes.Add(new Item() { Text = "M12", Value = 13 });
+            screwSizes.Add(new Item() { Text = "M16", Value = 18 });
+            screwSizes.Add(new Item() { Text = "M20", Value = 22 });
+            screwSizes.Add(new Item() { Text = "M22", Value = 24 });
+            screwSizes.Add(new Item() { Text = "M24", Value = 26 });
+            screwSizes.Add(new Item() { Text = "M27", Value = 30 });
+            screwSizes.Add(new Item() { Text = "M30", Value = 33 });
+            screwSizes.Add(new Item() { Text = "M36", Value = 39 });
+            screwSize1.DataSource = screwSizes;
+            screwSize1.DisplayMember = "Text";
+            screwSize1.ValueMember = "Value";
+
+            List<Item> beams = new List<Item>();
+            beams.Add(new Item() { Text = "HEA120", Value = 1 });
+            beams.Add(new Item() { Text = "HEA180", Value = 2 });
+            beams.Add(new Item() { Text = "HEA320", Value = 3 });
+            beams.Add(new Item() { Text = "HEA700", Value = 4 });
+            beam.DataSource = beams;
+            beam.DisplayMember = "Text";
+            beam.ValueMember = "Value";
+
+            List<Item> beamMaterials = new List<Item>();
+            beamMaterials.Add(new Item() { Text = "S235", Value = 235 });
+            beamMaterials.Add(new Item() { Text = "S355", Value = 355 });
+            beamMaterial.DataSource = beamMaterials;
+            beamMaterial.DisplayMember = "Text";
+            beamMaterial.ValueMember = "Value";
+
+            List<Item> plateMaterials = new List<Item>();
+            plateMaterials.Add(new Item() { Text = "S235", Value = 235 });
+            plateMaterials.Add(new Item() { Text = "S355", Value = 355 });
+            plateMaterial.DataSource = plateMaterials;
+            plateMaterial.DisplayMember = "Text";
+            plateMaterial.ValueMember = "Value";
+
+            List<Item> plateThicknesses = new List<Item>();
+            plateThicknesses.Add(new Item() { Text = "10mm", Value = 10 });
+            plateThicknesses.Add(new Item() { Text = "12mm", Value = 12 });
+            plateThicknesses.Add(new Item() { Text = "15mm", Value = 15 });
+            plateThicknesses.Add(new Item() { Text = "20mm", Value = 20 });
+            plateThicknesses.Add(new Item() { Text = "25mm", Value = 25 });
+            plateThicknesses.Add(new Item() { Text = "30mm", Value = 30 });
+            plateThickness.DataSource = plateThicknesses;
+            plateThickness.DisplayMember = "Text";
+            plateThickness.ValueMember = "Value";
+
+
             flag = true;
             Calculate();
         }
@@ -80,6 +146,31 @@ namespace Strength_Calculator
             resultBox.Text = result.ToString();
             resultBoxK.Text = (result / 1000).ToString();
             formula.Text = CuttingStrength.formula;
+        }
+
+        void CalculateBlock()
+        {
+            if (!flag)
+                return;
+
+            if (e1.Text == null || e1.Text == "" || e2.Text == null || e2.Text == "" || p1.Text == null || p1.Text == "" || p2.Text == null || p2.Text == "")
+                return;
+            //TODO: print error!
+
+            float result = BlockShearingStrength.Calculate(
+                int.Parse(plateMaterial.SelectedValue.ToString()),
+                int.Parse(beamMaterial.SelectedValue.ToString()),
+                int.Parse(screwAmount1.SelectedValue.ToString()),
+                float.Parse(e1.Text.ToString()),
+                float.Parse(e2.Text.ToString()),
+                float.Parse(p1.Text.ToString()),
+                float.Parse(p2.Text.ToString()),
+                int.Parse(beam.SelectedValue.ToString()),
+                int.Parse(plateThickness.SelectedValue.ToString()),
+                int.Parse(screwSize1.SelectedValue.ToString()),
+                int.Parse(shearing.SelectedValue.ToString()));
+
+            result01.Text = (result / 1000).ToString() + " kN";
         }
 
         private void shearing_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,6 +201,61 @@ namespace Strength_Calculator
         private void screwShearing_SelectedIndexChanged(object sender, EventArgs e)
         {
             Calculate();
+        }
+
+        private void shearing_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void screwAmount1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void screwSize1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void beam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void beamMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void plateThickness_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void plateMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void e1_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void p1_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void e2_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
+        }
+
+        private void p2_TextChanged(object sender, EventArgs e)
+        {
+            CalculateBlock();
         }
     }
 
