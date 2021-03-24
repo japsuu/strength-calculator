@@ -109,17 +109,18 @@ namespace Strength_Calculator
 
 
 
-
             return Math.Min(plateStrength, beamStrength);
         }
 
         public static float PlateStrength(float fy, float fu, float anv, float ant)
         {
+            formula = $"Plate: ({fu} * {ant} / {1.25f}) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1)";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
 
         public static float BeamStrength(float fy, float fu, float anv, float ant)
         {
+            formula += $"\nBeam: ({fu} * {ant} / 1.25f) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1)";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
     }

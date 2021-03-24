@@ -171,6 +171,7 @@ namespace Strength_Calculator
                 int.Parse(shearing.SelectedValue.ToString()));
 
             result01.Text = (result / 1000).ToString() + " kN";
+            blockFormula.Text = BlockShearingStrength.formula;
         }
 
         private void shearing_SelectedIndexChanged(object sender, EventArgs e)
