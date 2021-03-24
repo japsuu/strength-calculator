@@ -16,7 +16,7 @@ namespace Strength_Calculator
     public partial class Form1 : Form
     {
         bool flag = false;
-        List<TextBox> inputs = new List<TextBox>();
+        List<NumericUpDown> inputs = new List<NumericUpDown>();
         public Form1()
         {
             InitializeComponent();
@@ -135,6 +135,7 @@ namespace Strength_Calculator
 
             flag = true;
             Calculate();
+            OnTopListener(null, null);
         }
 
         void Calculate()
@@ -194,97 +195,47 @@ namespace Strength_Calculator
                 negWarn.Visible = true;
         }
 
-        private void shearing_SelectedIndexChanged(object sender, EventArgs e)
+        private void CalculateListener(object sender, EventArgs e)
         {
             Calculate();
         }
 
-        private void screwClass_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void screwSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void screwThreading_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void screwAmount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void screwShearing_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void shearing_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void CalculateBlockListener(object sender, EventArgs e)
         {
             CalculateBlock();
         }
 
-        private void screwAmount1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void screwSize1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void beam_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void beamMaterial_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void plateThickness_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void plateMaterial_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void e1_TextChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void p1_TextChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void e2_TextChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void p2_TextChanged(object sender, EventArgs e)
-        {
-            CalculateBlock();
-        }
-
-        private void alwaysOnTop_CheckedChanged(object sender, EventArgs e)
+        private void OnTopListener(object sender, EventArgs e)
         {
             if (alwaysOnTop.Checked)
                 TopMost = true;
             else
                 TopMost = false;
+        }
+
+        private void LinkListener(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/TheJapsu1/strength-calculator");
+        }
+
+        private void e1_Enter(object sender, EventArgs e)
+        {
+            e1.Select(0, e1.Text.Length);
+        }
+
+        private void e2_Enter(object sender, EventArgs e)
+        {
+            e2.Select(0, e2.Text.Length);
+        }
+
+        private void p1_Enter(object sender, EventArgs e)
+        {
+            p1.Select(0, p1.Text.Length);
+        }
+
+        private void p2_Enter(object sender, EventArgs e)
+        {
+            p2.Select(0, p2.Text.Length);
         }
     }
 
