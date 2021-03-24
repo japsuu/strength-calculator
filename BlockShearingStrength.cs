@@ -16,13 +16,8 @@ namespace Strength_Calculator
         {
             float pFy = 0;
             float pFu = 0;
-            float pAnt = 0;
-            float pAnv = 0;
-
             float bFy = 0;
             float bFu = 0;
-            float bAnt = 0;
-            float bAnv = 0;
             float bT = 0;
 
             float nver = 2;
@@ -50,15 +45,6 @@ namespace Strength_Calculator
                 default:
                     break;
             }
-
-            pAnt = ((nver - 1) * p2 - 2 * d0 / 2) * pT;
-            pAnv = ((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT;
-
-            float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt) * shearing;
-
-            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {pT}";
-            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {pT}";
-
 
             switch (beamMaterial)
             {
@@ -104,14 +90,24 @@ namespace Strength_Calculator
                     break;
             }
 
-            bAnt = ((nver - 1) * p2 - 2 * d0 / 2) * bT;
-            bAnv = ((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * bT;
+            //levyn Ant & Anv laskeminen:
+            float pAnt = ((nver - 1) * p2 - 2 * d0 / 2) * pT;
+            float pAnv = ((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT * 2;
+
+            //palkin Ant & Anv laskeminen:
+            float bAnt = ((nver - 1) * p2 - 2 * d0 / 2) * bT;
+            float bAnv = ((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * bT * 2;
+
+            float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt) * shearing;
+
+            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {pT} = {((nver - 1) * p2 - 2 * d0 / 2) * pT}";
+            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {pT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT * 2}";
+
 
             float beamStrength = BeamStrength(bFy, bFu, bAnv, bAnt);
 
-            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {bT}";
-            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {bT}";
-
+            formula += $"\nAnt= (({nver} - 1) * {p2} - 2 * {d0} / 2) * {bT} = {((nver - 1) * p2 - 2 * d0 / 2) * bT}";
+            formula += $"\nAnv= (({nhor} - 1) * {p1} + {e1} - ({nhor} - 1) * {d0} - {d0} / 2) * {bT} * 2 = {((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * bT * 2}";
 
 
             return Math.Min(plateStrength, beamStrength);
@@ -119,13 +115,13 @@ namespace Strength_Calculator
 
         public static float PlateStrength(float fy, float fu, float anv, float ant)
         {
-            formula = $"Plate: ({fu} * {ant} / {1.25f}) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1)";
+            formula = $"Plate: ({fu} * {ant} / {1.25f}) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1) = {(fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)}";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
 
         public static float BeamStrength(float fy, float fu, float anv, float ant)
         {
-            formula += $"\nBeam: ({fu} * {ant} / 1.25f) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1)";
+            formula += $"\nBeam: ({fu} * {ant} / 1.25f) + ((1 / Math.Sqrt(3)) * {fy} * {anv} / 1) = {(fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)}";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
     }

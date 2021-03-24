@@ -16,6 +16,7 @@ namespace Strength_Calculator
     public partial class Form1 : Form
     {
         bool flag = false;
+        List<TextBox> inputs = new List<TextBox>();
         public Form1()
         {
             InitializeComponent();
@@ -126,6 +127,11 @@ namespace Strength_Calculator
             plateThickness.DisplayMember = "Text";
             plateThickness.ValueMember = "Value";
 
+            inputs.Add(e1);
+            inputs.Add(e2);
+            inputs.Add(p1);
+            inputs.Add(p2);
+
 
             flag = true;
             Calculate();
@@ -153,9 +159,20 @@ namespace Strength_Calculator
             if (!flag)
                 return;
 
+            for (int i = 0; i < inputs.Count; i++)
+            {
+                if (inputs[i].Text == null || inputs[i].Text == "")
+                {
+                    inputs[i].BackColor = Color.FromArgb(255, 174, 168);
+                }
+                else
+                    inputs[i].BackColor = Color.White;
+            }
+
             if (e1.Text == null || e1.Text == "" || e2.Text == null || e2.Text == "" || p1.Text == null || p1.Text == "" || p2.Text == null || p2.Text == "")
+            {
                 return;
-            //TODO: print error!
+            }
 
             float result = BlockShearingStrength.Calculate(
                 int.Parse(plateMaterial.SelectedValue.ToString()),
