@@ -54,7 +54,7 @@ namespace Strength_Calculator
             pAnt = ((nver - 1) * p2 - 2 * d0 / 2) * pT;
             pAnv = ((nhor - 1) * p1 + e1 - (nhor - 1) * d0 - d0 / 2) * pT;
 
-            float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt);
+            float plateStrength = PlateStrength(pFy, pFu, pAnv, pAnt) * shearing;
 
 
             switch (beamMaterial)
@@ -110,7 +110,7 @@ namespace Strength_Calculator
 
 
 
-            return Math.Min(plateStrength, beamStrength) * shearing;
+            return Math.Min(plateStrength, beamStrength);
         }
 
         public static float PlateStrength(float fy, float fu, float anv, float ant)
