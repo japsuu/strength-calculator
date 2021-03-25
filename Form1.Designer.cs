@@ -76,6 +76,8 @@
             this.alwaysOnTop = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.githubLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.e1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -221,27 +225,29 @@
             // formula
             // 
             this.formula.AutoSize = true;
+            this.formula.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formula.Location = new System.Drawing.Point(85, 309);
             this.formula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.formula.Name = "formula";
-            this.formula.Size = new System.Drawing.Size(52, 17);
+            this.formula.Size = new System.Drawing.Size(61, 19);
             this.formula.TabIndex = 15;
             this.formula.Text = "Kaava:";
             // 
             // resultBoxK
             // 
+            this.resultBoxK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultBoxK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.resultBoxK.Location = new System.Drawing.Point(224, 255);
             this.resultBoxK.Margin = new System.Windows.Forms.Padding(4);
             this.resultBoxK.Name = "resultBoxK";
             this.resultBoxK.ReadOnly = true;
-            this.resultBoxK.Size = new System.Drawing.Size(79, 22);
+            this.resultBoxK.Size = new System.Drawing.Size(104, 27);
             this.resultBoxK.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(312, 258);
+            this.label8.Location = new System.Drawing.Point(336, 260);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 17);
@@ -256,11 +262,12 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(519, 526);
+            this.tabControl1.Size = new System.Drawing.Size(609, 526);
             this.tabControl1.TabIndex = 101;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.screwShearing);
             this.tabPage1.Controls.Add(this.screwClass);
             this.tabPage1.Controls.Add(this.label1);
@@ -279,13 +286,14 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(511, 497);
+            this.tabPage1.Size = new System.Drawing.Size(601, 497);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ruuvin leikkauskestävyys";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox2);
             this.tabPage2.Controls.Add(this.p2);
             this.tabPage2.Controls.Add(this.p1);
             this.tabPage2.Controls.Add(this.e2);
@@ -318,7 +326,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(511, 497);
+            this.tabPage2.Size = new System.Drawing.Size(601, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Palamurtumiskestävyys";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -382,7 +390,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(312, 382);
+            this.label21.Location = new System.Drawing.Point(336, 382);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(25, 17);
@@ -401,11 +409,12 @@
             // 
             // result01
             // 
+            this.result01.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.result01.Location = new System.Drawing.Point(224, 378);
             this.result01.Margin = new System.Windows.Forms.Padding(4);
             this.result01.Name = "result01";
             this.result01.ReadOnly = true;
-            this.result01.Size = new System.Drawing.Size(79, 22);
+            this.result01.Size = new System.Drawing.Size(104, 27);
             this.result01.TabIndex = 11;
             // 
             // negWarn
@@ -423,7 +432,8 @@
             // blockFormula
             // 
             this.blockFormula.AutoSize = true;
-            this.blockFormula.Location = new System.Drawing.Point(40, 419);
+            this.blockFormula.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blockFormula.Location = new System.Drawing.Point(7, 416);
             this.blockFormula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blockFormula.Name = "blockFormula";
             this.blockFormula.Size = new System.Drawing.Size(0, 17);
@@ -579,47 +589,51 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(192, 80);
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(188, 77);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 17);
+            this.label11.Size = new System.Drawing.Size(32, 21);
             this.label11.TabIndex = 10;
-            this.label11.Text = "p2:";
+            this.label11.Text = "p₂:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(85, 80);
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(81, 77);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 17);
+            this.label12.Size = new System.Drawing.Size(32, 21);
             this.label12.TabIndex = 9;
-            this.label12.Text = "p1:";
+            this.label12.Text = "p₁:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(192, 48);
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(188, 45);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(28, 17);
+            this.label10.Size = new System.Drawing.Size(30, 21);
             this.label10.TabIndex = 8;
-            this.label10.Text = "e2:";
+            this.label10.Text = "e₂:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(85, 48);
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(81, 45);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 17);
+            this.label9.Size = new System.Drawing.Size(30, 21);
             this.label9.TabIndex = 7;
-            this.label9.Text = "e1:";
+            this.label9.Text = "e₁:";
             // 
             // alwaysOnTop
             // 
             this.alwaysOnTop.AutoSize = true;
-            this.alwaysOnTop.Location = new System.Drawing.Point(372, 10);
+            this.alwaysOnTop.Location = new System.Drawing.Point(432, 10);
             this.alwaysOnTop.Margin = new System.Windows.Forms.Padding(4);
             this.alwaysOnTop.Name = "alwaysOnTop";
             this.alwaysOnTop.Size = new System.Drawing.Size(159, 21);
@@ -649,11 +663,33 @@
             this.githubLinkLabel.Text = "Link to source";
             this.githubLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkListener);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::Strength_Calculator.Properties.Resources.unnamed;
+            this.pictureBox1.Location = new System.Drawing.Point(427, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 202);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::Strength_Calculator.Properties.Resources.unnamed;
+            this.pictureBox2.Location = new System.Drawing.Point(427, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 202);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 574);
+            this.ClientSize = new System.Drawing.Size(633, 574);
             this.Controls.Add(this.githubLinkLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.alwaysOnTop);
@@ -663,7 +699,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Kestävyyslaskuri";
+            this.Text = "Kestävyyslaskuri [limitetty vetoliitos]";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -673,6 +709,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.p1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.e1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -726,6 +764,8 @@
         private System.Windows.Forms.NumericUpDown p2;
         private System.Windows.Forms.NumericUpDown p1;
         private System.Windows.Forms.NumericUpDown e2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
