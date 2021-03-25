@@ -151,7 +151,15 @@ namespace Strength_Calculator
                 int.Parse(screwAmount.SelectedValue.ToString()));
 
             resultBoxK.Text = (result / 1000).ToString();
-            formula.Text = CuttingStrength.formula;
+            //formula.Text = CuttingStrength.formula;
+            richTextResult1.Clear();
+            richTextResult1.SelectionCharOffset = 0;
+            richTextResult1.SelectedText = "F";
+            richTextResult1.SelectionCharOffset = -10;
+            richTextResult1.SelectedText = "v,Rd";
+            richTextResult1.SelectionCharOffset = 0;
+            richTextResult1.SelectedText = "= " + CuttingStrength.formula;
+
         }
 
         void CalculateBlock()
@@ -188,7 +196,29 @@ namespace Strength_Calculator
                 int.Parse(shearing.SelectedValue.ToString()));
 
             result01.Text = (result / 1000).ToString();
-            blockFormula.Text = BlockShearingStrength.formula;
+            //blockFormula.Text = BlockShearingStrength.formula;
+
+            richTextResult2.Clear();
+            richTextResult2.SelectionCharOffset = 0;
+            richTextResult2.SelectionFont = new Font("Times New Roman", 9);
+            richTextResult2.SelectedText = "Levy: ";
+            richTextResult2.SelectionFont = new Font("Times New Roman", 9, FontStyle.Italic);
+            richTextResult2.SelectedText = "V";
+            richTextResult2.SelectionCharOffset = -10;
+            richTextResult2.SelectedText = "eff,1,Rd";
+            richTextResult2.SelectionCharOffset = 0;
+            richTextResult2.SelectedText = "= " + BlockShearingStrength.formula1;
+            richTextResult2.AppendText("\n\n");
+            richTextResult2.SelectionCharOffset = 0;
+            richTextResult2.SelectionFont = new Font("Times New Roman", 9);
+            richTextResult2.SelectedText = "Palkki: ";
+            richTextResult2.SelectionFont = new Font("Times New Roman", 9, FontStyle.Italic);
+            richTextResult2.SelectedText = "V";
+            richTextResult2.SelectionCharOffset = -10;
+            richTextResult2.SelectedText = "eff,1,Rd";
+            richTextResult2.SelectionCharOffset = 0;
+            richTextResult2.SelectedText = "= " + BlockShearingStrength.formula2;
+
             if (result >= 0)
                 negWarn.Visible = false;
             else

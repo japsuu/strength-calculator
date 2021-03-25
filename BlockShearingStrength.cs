@@ -11,7 +11,8 @@ namespace Strength_Calculator
 {
     class BlockShearingStrength
     {
-        public static string formula = "";
+        public static string formula1 = "";
+        public static string formula2 = "";
         public static float _shear = 1;
         public static float Calculate(int plateMaterial, int beamMaterial, int screwCount, float e1, float e2, float p1, float p2, int beamType, int pT, int d0, int shearing)
         {
@@ -117,13 +118,13 @@ namespace Strength_Calculator
 
         public static float PlateStrength(float fy, float fu, float anv, float ant)
         {
-            formula = $"Levy: (({fu} * {ant} / {1.25f}) + ((1 / sqrt(3)) * {fy} * {anv} / 1)) * {_shear} = {((fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)) * _shear} N";
+            formula1 = $"(({fu} * {ant} / {1.25f}) + ((1 / sqrt(3)) * {fy} * {anv} / 1)) * {_shear} = {((fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)) * _shear} N";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
 
         public static float BeamStrength(float fy, float fu, float anv, float ant)
         {
-            formula += $"\nPalkki: ({fu} * {ant} / 1.25f) + ((1 / sqrt(3)) * {fy} * {anv} / 1) = {(fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)} N";
+            formula2 = $"({fu} * {ant} / 1.25f) + ((1 / sqrt(3)) * {fy} * {anv} / 1) = {(fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1)} N";
             return (fu * ant / 1.25f) + (float)((1 / Math.Sqrt(3)) * fy * anv / 1);
         }
     }

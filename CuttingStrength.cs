@@ -122,7 +122,7 @@ namespace Strength_Calculator
             result *= _shreading;
 
             //assign the formula "njauuuuuuuuuuuuu"
-            formula = $"Kaava: ({av} * {fub} * {A} / 1.25) * {_screwAmount} * {_shreading} = {result}";
+            formula = $"({av} * {fub} * {A} / 1.25) * {_screwAmount} * {_shreading} = {result}";
 
             return result;
         }

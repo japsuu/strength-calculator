@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.richTextResult1 = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.p2 = new System.Windows.Forms.NumericUpDown();
             this.p1 = new System.Windows.Forms.NumericUpDown();
@@ -76,8 +77,11 @@
             this.alwaysOnTop = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.githubLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.richTextResult2 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -87,6 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.e1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -215,7 +221,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 258);
+            this.label6.Location = new System.Drawing.Point(40, 249);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 17);
@@ -226,18 +232,19 @@
             // 
             this.formula.AutoSize = true;
             this.formula.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.formula.Location = new System.Drawing.Point(85, 309);
+            this.formula.Location = new System.Drawing.Point(56, 430);
             this.formula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.formula.Name = "formula";
-            this.formula.Size = new System.Drawing.Size(61, 19);
+            this.formula.Size = new System.Drawing.Size(150, 19);
             this.formula.TabIndex = 15;
-            this.formula.Text = "Kaava:";
+            this.formula.Text = "vanha tuloslaatikko";
+            this.formula.Visible = false;
             // 
             // resultBoxK
             // 
             this.resultBoxK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultBoxK.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.resultBoxK.Location = new System.Drawing.Point(224, 255);
+            this.resultBoxK.Location = new System.Drawing.Point(224, 244);
             this.resultBoxK.Margin = new System.Windows.Forms.Padding(4);
             this.resultBoxK.Name = "resultBoxK";
             this.resultBoxK.ReadOnly = true;
@@ -247,7 +254,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(336, 260);
+            this.label8.Location = new System.Drawing.Point(336, 249);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(25, 17);
@@ -262,11 +269,13 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(609, 526);
+            this.tabControl1.Size = new System.Drawing.Size(704, 576);
             this.tabControl1.TabIndex = 101;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.richTextResult1);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.screwShearing);
             this.tabPage1.Controls.Add(this.screwClass);
@@ -286,14 +295,31 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(601, 497);
+            this.tabPage1.Size = new System.Drawing.Size(696, 547);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ruuvin leikkauskestävyys";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // richTextResult1
+            // 
+            this.richTextResult1.BackColor = System.Drawing.SystemColors.Window;
+            this.richTextResult1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextResult1.DetectUrls = false;
+            this.richTextResult1.Font = new System.Drawing.Font("Times New Roman", 10.1F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextResult1.Location = new System.Drawing.Point(43, 304);
+            this.richTextResult1.Multiline = false;
+            this.richTextResult1.Name = "richTextResult1";
+            this.richTextResult1.ReadOnly = true;
+            this.richTextResult1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.richTextResult1.Size = new System.Drawing.Size(558, 106);
+            this.richTextResult1.TabIndex = 36;
+            this.richTextResult1.Text = "tulos";
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.richTextResult2);
             this.tabPage2.Controls.Add(this.p2);
             this.tabPage2.Controls.Add(this.p1);
             this.tabPage2.Controls.Add(this.e2);
@@ -326,7 +352,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(601, 497);
+            this.tabPage2.Size = new System.Drawing.Size(696, 547);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Palamurtumiskestävyys";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -421,7 +447,7 @@
             // 
             this.negWarn.AutoSize = true;
             this.negWarn.ForeColor = System.Drawing.Color.Red;
-            this.negWarn.Location = new System.Drawing.Point(4, 475);
+            this.negWarn.Location = new System.Drawing.Point(4, 528);
             this.negWarn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.negWarn.Name = "negWarn";
             this.negWarn.Size = new System.Drawing.Size(442, 17);
@@ -433,11 +459,13 @@
             // 
             this.blockFormula.AutoSize = true;
             this.blockFormula.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blockFormula.Location = new System.Drawing.Point(7, 416);
+            this.blockFormula.Location = new System.Drawing.Point(451, 305);
             this.blockFormula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blockFormula.Name = "blockFormula";
-            this.blockFormula.Size = new System.Drawing.Size(0, 17);
+            this.blockFormula.Size = new System.Drawing.Size(133, 17);
             this.blockFormula.TabIndex = 30;
+            this.blockFormula.Text = "vanha tuloslaatikko";
+            this.blockFormula.Visible = false;
             // 
             // screwSize1
             // 
@@ -646,7 +674,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(13, 548);
+            this.label7.Location = new System.Drawing.Point(9, 590);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(350, 17);
             this.label7.TabIndex = 103;
@@ -655,7 +683,7 @@
             // githubLinkLabel
             // 
             this.githubLinkLabel.AutoSize = true;
-            this.githubLinkLabel.Location = new System.Drawing.Point(369, 548);
+            this.githubLinkLabel.Location = new System.Drawing.Point(365, 590);
             this.githubLinkLabel.Name = "githubLinkLabel";
             this.githubLinkLabel.Size = new System.Drawing.Size(97, 17);
             this.githubLinkLabel.TabIndex = 104;
@@ -663,13 +691,27 @@
             this.githubLinkLabel.Text = "Link to source";
             this.githubLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkListener);
             // 
+            // richTextResult2
+            // 
+            this.richTextResult2.BackColor = System.Drawing.SystemColors.Window;
+            this.richTextResult2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextResult2.DetectUrls = false;
+            this.richTextResult2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextResult2.Location = new System.Drawing.Point(43, 412);
+            this.richTextResult2.Name = "richTextResult2";
+            this.richTextResult2.ReadOnly = true;
+            this.richTextResult2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.richTextResult2.Size = new System.Drawing.Size(623, 113);
+            this.richTextResult2.TabIndex = 37;
+            this.richTextResult2.Text = "";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::Strength_Calculator.Properties.Resources.unnamed;
-            this.pictureBox1.Location = new System.Drawing.Point(427, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(461, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
@@ -678,18 +720,38 @@
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::Strength_Calculator.Properties.Resources.unnamed;
-            this.pictureBox2.Location = new System.Drawing.Point(427, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(461, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(174, 202);
+            this.pictureBox2.Size = new System.Drawing.Size(229, 266);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Strength_Calculator.Properties.Resources.AFRY_Logotype_Horizontal;
+            this.pictureBox3.Location = new System.Drawing.Point(461, 277);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(229, 106);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 40;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Strength_Calculator.Properties.Resources.AFRY_Logotype_Horizontal;
+            this.pictureBox4.Location = new System.Drawing.Point(461, 277);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(229, 106);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 574);
+            this.ClientSize = new System.Drawing.Size(728, 616);
             this.Controls.Add(this.githubLinkLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.alwaysOnTop);
@@ -699,7 +761,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Kestävyyslaskuri [limitetty vetoliitos]";
+            this.Text = "Limitetty vetoliitos";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -711,6 +773,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.e1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -765,7 +829,11 @@
         private System.Windows.Forms.NumericUpDown p1;
         private System.Windows.Forms.NumericUpDown e2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RichTextBox richTextResult1;
+        private System.Windows.Forms.RichTextBox richTextResult2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
