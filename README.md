@@ -4,4 +4,4 @@ WinForms/C# implementation of a industrial calculator, designed to calculate [bl
 
 ---
 
-## NOTE: This is a demo project, which isn't ready for production. I take no responsibility for falling skyscrapers nor crumbling bridges :)
+## NOTE: This is a demo project made in two days, so make sure to treat it as one. I take no responsibility for falling skyscrapers nor crumbling bridges :)
